@@ -67,19 +67,11 @@ nav > a {
     text-align: center;
     margin-top: 0px;
 }
-#carnotauroimg {
+img {
     max-width: 400px;
-    min-width: 200px;
+    min-width: none;
     display: block;
     margin: auto;
-    max-height: 250px;
-}
-#carnotauroimg2 {
-    max-width: 400px;
-    min-width: 200px;
-    display: block;
-    margin: auto;
-    max-height: 250px;
 }
 .subt {
     font-size: 1.5em;
