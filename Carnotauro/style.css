@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+
+:root {
+--cor1: #521605;
+--cor2: #EB3200;
+--cor3: #D1370D;
+--cor4: #f7cec2;
+--fonteh1: 'Anton', sans-serif;
+--fonte2: 'Libre Caslon Text', serif;
+}
+body {
+    background-color: var(--cor4);
+    margin: 0px;
+}
+header {
+    background-image: linear-gradient(to top,  #521605, #681c07);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+h1 {
+    font-family: var(--fonteh1); 
+    font-size: 3.5em;
+    margin-bottom: 0px;
+}
+header > p {
+    margin-bottom: 18px;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+header > p:hover {
+    text-decoration: underline;
+}
+a:hover {
+    background-color: rgba(255, 255, 255, 0.116);
+}
+main {
+    background-color: white;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.322);
+    padding: 15px;
+    min-width: 300px;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+main p {
+    text-align: justify;
+    text-indent: 25px;
+}
+nav {
+    background-color: var(--cor1);
+    text-align: left;
+}
+nav > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    
+}
+#subtituloUm {
+    text-align: center;
+    margin-top: 0px;
+}
+#carnotauroimg {
+    max-width: 400px;
+    min-width: 200px;
+    display: block;
+    margin: auto;
+    max-height: 250px;
+}
+#carnotauroimg2 {
+    max-width: 400px;
+    min-width: 200px;
+    display: block;
+    margin: auto;
+    max-height: 250px;
+}
+.subt {
+    font-size: 1.5em;
+    margin-left: 18px;
+}
+#fim {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+footer {
+    background-color: #521605;
+    text-align: center;
+}
+footer > p {
+    font-style: italic;
+    color: white;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    margin-bottom: 0px;
+}
+main a {
+    color: #D1370D;
+    text-decoration: none;
+    font-weight: bold;
+}
