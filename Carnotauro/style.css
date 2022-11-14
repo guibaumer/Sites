@@ -67,9 +67,9 @@ nav > a {
     text-align: center;
     margin-top: 0px;
 }
-img {
-    max-width: 400px;
-    min-width: none;
+main img {
+    max-width: 40%;
+    min-width: 30%;
     display: block;
     margin: auto;
 }
