@@ -50,9 +50,7 @@ main p {
     background-position: right center;
     background-attachment: fixed;
     background-size: cover;
-    padding: 15px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.37);
-   
 }
 #div2 > p {
     color: white;
@@ -66,10 +64,7 @@ main p {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    padding: 15px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.37);
-   
-    
 }
 #div5 > p {
     color: white;
