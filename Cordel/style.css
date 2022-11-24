@@ -9,9 +9,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     
 }
+div {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 header {
     background-color: black;
-    color: rgb(141, 9, 9);
+    color: rgb(44, 141, 9);
     text-align: center;
     padding: 20px;
 }
@@ -57,7 +61,7 @@ main p {
     background-color: rgba(0, 0, 0, 0.116);
     display: inline-block;
     padding: 5px;
-    margin-left: 20px;
+    margin-left: 45px;
 }
 #div5 {
     background-image: url(imagens/background002.jpg);
@@ -71,7 +75,7 @@ main p {
     background-color: rgba(0, 0, 0, 0.374);
     display: inline-block;
     padding: 5px;
-    margin-left: 20px;
+    margin-left: 45px;
 }
 footer {
     background-color: black;
