@@ -13,7 +13,7 @@ header {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
 }
 header a {
     font-weight: bold;
@@ -84,7 +84,7 @@ footer {
     font-size: 2vw;
     text-align: center;
     margin: 0px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 footer a {
     text-decoration: none;
