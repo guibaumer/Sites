@@ -1,6 +1,7 @@
 body {
     background-image: linear-gradient(to right, #1667C9, #0E407D);
     font: normal 15pt Arial;
+    margin: 0px;
     }
     header {
     color: white;
@@ -40,4 +41,22 @@ body {
             margin-top: 9px;
         }
         header {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifSS;}
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            margin-bottom: 0px;
+            font-size: 0.7em;
+        }
+        footer p {
+            margin-bottom: 0px;
+            padding: 3px;
+            font-style: italic;
+        }
+        footer a {
+            text-decoration: none;
+            color: #1667C9;
+            font-weight: bolder;
+        }
+        
