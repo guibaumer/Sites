@@ -1,33 +1,19 @@
 @charset "UTF-8";
 
 
-@media screen and (max-width:300px) {
-
+@media screen and (max-width:400px) {
     header {
-        background-color: red;
+        background-color: darkgreen;
     }
-section.texto {
-    /* width: 280px; */
-    width: 80%;
 }
-header img {
-    width: 200px;
-}
-header nav.menu {
-    display: none;
-}
-}
-
-
-
-@media screen and (min-width:301px) and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     /* pequenas telas */
-    header {
-        background-color: blue;
-    }
+header {
+    background-color: blue;
+}
 section.texto {
-        /* width: 380px;   */
-        width: 80%;
+    /* width: 380px;   */
+    width: 80%;
 }
 img#beatrice {
     position: absolute;
