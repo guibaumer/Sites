@@ -2,8 +2,95 @@
 
 
 @media screen and (max-width:400px) {
+    body {
+        font-size: 0.9em;
+    }
     header {
-        background-color: darkgreen;
+        background-color: rgb(25, 168, 25);
+        position: relative;
+    }
+        footer {
+            width: 94.3%;
+             
+             
+        }
+    header nav.menu {
+        display: none;
+    }
+    header img {
+        width: 90%;
+        padding: 20px;
+    }
+    header .material-symbols-outlined {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    section.texto {
+        width: 70%;
+        margin: auto;
+    }
+    #p1 {
+        height: 800px;
+        border-top: 20px solid var(--cor6);
+    }
+    #texto1 {
+        margin-top: 10px;
+    }
+    section#p2 {
+        height: 820px;
+    }
+    #beatrice {
+        display: none;
+    }
+    section#b1 {
+        width: 97%;
+        margin: auto;
+        height: 700px;
+        background-position: center center;
+    }
+    section#b1 section.texto {
+        margin-top: 70px;
+    }
+    section#b2 {
+        width: 97%;
+        margin: auto;
+        height: 1300px;
+    }
+    #img1 {
+        width: 100%;
+        display: block;
+    }
+    #img2 {
+        height: 50%;
+        width: 100%;
+    }
+    div#div-img2 {
+        background-color: greenyellow;
+        width: 70%;
+        height: 8%;
+    }
+    #img4 {
+        display: none;
+        position: absolute;
+        bottom: -4560px;
+        left: 20px;
+        border-radius: 0px;
+    }
+    #img3 {
+        display: none;
+        position: absolute;
+        bottom: -4650px;
+        right: 20px;
+        border-radius: 0px;
+    }
+    
+    section#p3 {
+        height: 830px;
+    }
+    #link-p2 {
+        margin-top: 25px;
     }
 }
 
