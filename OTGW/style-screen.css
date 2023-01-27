@@ -6,7 +6,8 @@
         background-color: darkgreen;
     }
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (min-width:401px) and (max-width: 600px) {
     /* pequenas telas */
 header {
     background-color: blue;
