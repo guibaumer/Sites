@@ -152,17 +152,17 @@ img#bell {
     background-color: rgb(0, 0, 0);
 }
 #b2 {
-    background-color: brown;
-    background-image: url(imgs/background2.jpg);
+    
+    
+    background-color: rgb(193, 186, 165);
     padding-top: 20px;
     padding-bottom: 20px;
-    height: 700px;
-    background-attachment: fixed;
+    height: 780px;
 }
-#texto4 {
-    margin-top: 7px;
+section#texto4 {
+    margin-top: 10px;
     background-color: white;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
 }
 #div-img2 {
     background-color: black;
@@ -286,7 +286,7 @@ nav.menu {
     margin: auto;
     border-radius: 15px 15px 0px 0px;
     text-align: center;
-    transform: translateY(15.4px);
+    transform: translateY(15px);
 }
 nav li {
     display: inline;
@@ -302,3 +302,6 @@ nav.menu a:hover {
     font-weight: bold;
     color:  rgb(253, 231, 190);
 }
+
+
+
