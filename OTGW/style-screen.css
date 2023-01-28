@@ -7,6 +7,7 @@
     }
     header {
         position: relative;
+        padding: 20px;
     }
     section#invisible {
         position: absolute;
@@ -49,6 +50,7 @@
         /* height: 930px; */
         height: fit-content;
         block-size: fit-content;
+        padding-bottom: 40px;
     }
     section#p2 section.texto {
         /* height: 900px; */
