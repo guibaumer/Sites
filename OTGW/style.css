@@ -20,7 +20,6 @@
 .texto {
     background-color: white;
     width: 700px;
-    margin: auto;
     padding: 30px;
     margin-bottom: 20px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.453); 
@@ -34,6 +33,7 @@ header {
 body {
     background-color: var(--cor6);
     font-family: var(--fontePrincipal);
+    overflow-x: hidden;
 }
 header img {
     display: block;
@@ -41,6 +41,10 @@ header img {
     width: 470px;
     transform: translateY(-10px);
 }
+header img:hover {
+        transform: translateY(-10px) scale(1.02);
+        cursor: pointer;
+} 
 html {
     scroll-behavior: smooth;
 }
@@ -77,30 +81,26 @@ main {
     margin-top: 20px;
 }
 #texto2 {
-   margin-top: 170px;
    background-color: rgba(0, 0, 0, 0.326);
    color: var(--cor7);
    font-size: 1.2em;
    padding: 30px;
 }
-#texto3 {
-   margin-top: 30px;
-   margin-bottom: 0px;  
-}
-
 #p1 {
     background-color: var(--cor-fundo);
-    padding-top: 20px;
     padding-bottom: 20px;
     height: 480px;
     border-top: 40px solid var(--cor6);
     border-bottom: 40px solid var(--cor6);
+    position: relative;
+    padding-top: 0px; 
 }
 #p2 {
     background-color: var(--cor-fundo);
     padding-top: 20px;
     padding-bottom: 0px;
     height: 780px;
+    
 }
 .material-symbols-outlined {
     color: white;
@@ -112,12 +112,12 @@ main {
 }
 #invisible .material-symbols-outlined {
     color: black;
-    bottom: auto;
-    position: absolute;
-    transform: unset;
+    position: initial;
+    bottom: initial;
     padding: 0px;
-    transform: translateX(570px);
+    transform: none;
     font-size: 2em;
+    float: right;
 }
 #invisible .material-symbols-outlined:hover {
     font-weight: bolder;
@@ -126,19 +126,36 @@ main {
 .material-symbols-outlined:hover {
     background-color: rgba(255, 255, 255, 0.126);
     border-radius: 50%;
-    
+    cursor: pointer;    
+}
+
+@keyframes voo {
+    0% {
+        /* right: 20px; */
+        right: -200px;
+        top: 40px;
+    }
+    50% {
+        right: 60px;
+        top: 20px;
+    }
+    100% {
+        right: 60px;
+        top: 30px;
+    }
 }
 #beatrice {
-    float: right;
-    transform: translate(-25px, 40px);
+    position: absolute;
+    right: 60px;
+    top: 30px;
     width: 150px;
-
-    
+    animation-name: voo;
+    animation-duration: 3s;
 }
 #beatrice:hover {
-    transform: translate(-60px, 10px);
+    /* transform: translate(-60px, 10px);
+    transition: 1s ease-in-out; */
     
-    transition: 1s ease-in-out;
 }
 img#bell {
     width: 100%;
@@ -152,18 +169,16 @@ img#bell {
     background-color: rgb(0, 0, 0);
 }
 #b2 {
-    
-    
     background-color: rgb(193, 186, 165);
     padding-top: 20px;
     padding-bottom: 20px;
     height: 780px;
+    background-image: url(imgs/night-otgw.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: repeat;
 }
-section#texto4 {
-    margin-top: 10px;
-    background-color: white;
-    /* padding-bottom: 15px; */
-}
+
 #div-img2 {
     background-color: black;
     width: 502px;
@@ -177,7 +192,6 @@ section#texto4 {
     width: 300px;
 }
 #p3 {
-
     height: 580px;
     background-color:var(--cor-fundo);
     padding-top: 20px;
@@ -205,21 +219,22 @@ section#texto4 {
     width: 35%;
     height: 100px;
 }
-#p-link {
+section#p3 div.div-link {
     text-align: center;
     display: block;
+    width: 200px;
+    margin-bottom: 40px;
+    
 }
 #link-p2 {
-display: block;
-width: 90px;
-padding: 5px;
-border-radius: 3px;
-margin: auto;
-/* margin-left: 610px; */
-
-background-color: var(--cor2);
-color: white;
-text-align: center;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    background-color: var(--cor2);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
 
 }
 #link-p2:hover {
@@ -231,16 +246,19 @@ text-align: center;
 .img-flutuante:hover {
     box-shadow: 0px 0px 5px black
 }
-#invisible {
+section#invisible {
     position: absolute;
+    z-index: 3;
     display: none;
     background-color: white;
-    width: 600px;
+    width: 40%;
+    min-width: 250px;
     height: 190px;
     padding: 20px;
     transform: translate(20px, -50px);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.425);
 }
+
 #invisible p {
     margin: 25px;
     border-bottom: 1px solid rgba(147, 146, 146, 0.358);
@@ -303,5 +321,12 @@ nav.menu a:hover {
     color:  rgb(253, 231, 190);
 }
 
-
+body#important section.flex-section.section-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    padding-bottom: 20px;
+}
 
