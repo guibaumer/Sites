@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
-
+@media screen and (max-width:600px) and (orientation: landscape) {
+    .hidden-menu img {
+        display: none;
+    }
+}
 @media screen and (max-width:400px) {
     body {
         font-size: 0.9em;
