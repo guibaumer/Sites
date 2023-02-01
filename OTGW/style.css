@@ -344,13 +344,13 @@ body#important section.flex-section.section-back {
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.541);
     width: 18vw;
     min-width: 190px;
-    /* height: 100vh; */
-    height: 100vh;   
-    min-height: 560px;
+    height: 94vh; 
+    min-height: 490px;
+    /* height: 540px; */
     flex-flow: column wrap;
     left: 0px;
     top: 0px;
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 0px 0px 10px 0px;
     transition: all 1s ease-in-out;
     display: none;
 }
@@ -370,11 +370,13 @@ body#important section.flex-section.section-back {
     font-weight: bolder;
 }
 .hidden-menu img {
-    width: 300px;
-    height: 160px;
+    /* width: 300px; */
+    width: 120%;
+    /* height: 160px; */
     transform: rotate(90deg);
     position: absolute;
-    left: -70px;
+    /* left: -70px; */
+    left: -30%;
     bottom: 80px;
 }
 span.material-symbols-outlined.close-hidden-menu {
@@ -387,7 +389,6 @@ span.material-symbols-outlined.close-hidden-menu {
     padding-right: 10px;
     padding-bottom: 0px;
     font-size: 40px;
-    transition: 1s;
 }
 span.material-symbols-outlined.close-hidden-menu:hover {
     background-color: inherit;
