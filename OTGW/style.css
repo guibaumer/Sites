@@ -152,11 +152,6 @@ main {
     animation-name: voo;
     animation-duration: 3s;
 }
-#beatrice:hover {
-    /* transform: translate(-60px, 10px);
-    transition: 1s ease-in-out; */
-    
-}
 img#bell {
     width: 100%;
     display: block;
@@ -252,11 +247,12 @@ section#p3 div.div-link {
     box-shadow: 0px 0px 5px black
 }
 section#invisible {
+    box-sizing: border-box;
     position: absolute;
     z-index: 3;
     display: none;
     background-color: white;
-    width: 40%;
+    width: 50%;
     min-width: 250px;
     height: 190px;
     padding: 20px;
@@ -301,7 +297,10 @@ footer p {
 }
 nav.menu {
     background-color: var(--cor2);
-    width: 540px;
+    /* width: 540px; */
+    max-width: 540px;
+    /* min-width: 280px;  */
+    min-width: none;
     padding: 5px;
     /* position: absolute; */
     bottom: 0px;
@@ -334,23 +333,62 @@ body#important section.flex-section.section-back {
     padding-bottom: 20px;
 }
 
-.hidden-menu {
+
+
+
+ .hidden-menu {
+    position: absolute;
+    z-index: 5;
     display: flex;
+    background-color: var(--cor2);  
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.541);
+    width: 18vw;
     display: none;
-    background-color: var(--cor2);
-    max-height: 200px;
-    height: 100px;
-    width: 100vw;
-    text-align: center;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    min-width: 190px;
+    height: 100vh;
+    flex-flow: column wrap;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px 0px 0px 0px;
+    transition: all 1s ease-in-out;
 }
 .hidden-menu a {
-    color: white;
+    color: var(--cor7);
     padding: 10px;
-    margin: 5px;
-    background-color: var(--cor3);
-    border-radius: 5px;
+    margin: 15px;
+    margin-left: 0px;
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+    border: 1px solid rgba(178, 177, 177, 0.489);
+    width: 140px;
+} 
+.hidden-menu a:hover {
+    padding-left: 30px;
+    transition: padding 500ms ease-in-out;
+    font-weight: bolder;
 }
+.hidden-menu img {
+    width: 300px;
+    transform: rotate(90deg);
+    position: absolute;
+    left: -70px;
+    bottom: 14%;
+}
+span.material-symbols-outlined.close-hidden-menu {
+    color: white;
+    display: block;
+    transform: none;
+    position: initial;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    font-size: 40px;
+    transition: 1s;
+}
+span.material-symbols-outlined.close-hidden-menu:hover {
+    background-color: inherit;
+    color: crimson;
+}
+
 
