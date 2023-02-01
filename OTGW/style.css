@@ -351,7 +351,7 @@ body#important section.flex-section.section-back {
     top: 0px;
     border-radius: 0px 0px 0px 0px;
     transition: all 1s ease-in-out;
-
+    display: none;
 }
 .hidden-menu a {
     color: var(--cor7);
