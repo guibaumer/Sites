@@ -194,19 +194,24 @@ img#bell {
 #p3 {
     height: 580px;
     background-color:var(--cor-fundo);
-    padding-top: 20px;
-    
+    padding-top: 20px;  
+}
+#texto4 {
+    background-color: rgba(255, 255, 255, 0.728);
 }
 #texto5 {
     margin-top: 20px;
+
+  
 }
 
 #box-imgs {
     background-color: none;
     text-align: center;
-    padding: 20px;
-    width: 300px;
+    max-width: 300px;
+    min-width: 220px;
     margin: auto;
+    margin-top: 10px;
 }
 #img3 {
     width: 35%;
@@ -326,7 +331,26 @@ body#important section.flex-section.section-back {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
     padding-bottom: 20px;
+}
+
+.hidden-menu {
+    display: flex;
+    display: none;
+    background-color: var(--cor2);
+    max-height: 200px;
+    height: 100px;
+    width: 100vw;
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.hidden-menu a {
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--cor3);
+    border-radius: 5px;
 }
 
