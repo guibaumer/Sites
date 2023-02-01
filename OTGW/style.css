@@ -343,14 +343,15 @@ body#important section.flex-section.section-back {
     background-color: var(--cor2);  
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.541);
     width: 18vw;
-    display: none;
     min-width: 190px;
-    height: 100vh;
+    /* height: 100vh; */
+    height: 560px;
     flex-flow: column wrap;
     left: 0px;
     top: 0px;
     border-radius: 0px 0px 0px 0px;
     transition: all 1s ease-in-out;
+
 }
 .hidden-menu a {
     color: var(--cor7);
@@ -369,10 +370,11 @@ body#important section.flex-section.section-back {
 }
 .hidden-menu img {
     width: 300px;
+    height: 160px;
     transform: rotate(90deg);
     position: absolute;
     left: -70px;
-    bottom: 14%;
+    bottom: 80px;
 }
 span.material-symbols-outlined.close-hidden-menu {
     color: white;
