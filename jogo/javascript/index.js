@@ -2,26 +2,28 @@ const mario = document.querySelector('.mario');
 const tubo = document.querySelector('.tubo');
 const nuvem = document.querySelector('.clouds');
 const section = document.querySelector('.container');
-
+// Altura da viewport multiplicada por 1% para obter um valor para vh
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }); 
 let segundos = 0;
 let timer = setInterval(() => {
     segundos++;
     console.log(segundos)
 }, 2000)
-
 function pular() {
     mario.classList.add('jump')
     setTimeout(() => {
         mario.classList.remove('jump');
     }, 700)
 }
-
 const loop = setInterval(() => {
-
     const posicaoTubo = tubo.offsetLeft; 
     const posicaoNuvem = nuvem.offsetLeft; 
     const posicaoMario = Number(window.getComputedStyle(mario).bottom.replace('px', ''))
-
     if(posicaoTubo <= 129 && posicaoMario < 112 && posicaoTubo > 0) {
         clearInterval(timer);
         mensagemMorte();
@@ -38,7 +40,6 @@ const loop = setInterval(() => {
         clearInterval(loop);
     }
 }, 10);
-
 function mensagemMorte() {
     const div = document.createElement('div');
     div.classList.add('div-fim')
@@ -59,7 +60,6 @@ function reiniciar() {
     })
 }
 function pontuar(seg) {
-    // let pontos = (seg / 2).toFixed(0);
     const div = document.createElement('div');
     div.classList.add('pontos');
     div.innerText = `SUA PONTUAÇÃO: ${Math.floor(seg)}`;
