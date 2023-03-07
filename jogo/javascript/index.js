@@ -69,6 +69,8 @@ function pontuar(seg) {
 }
 
 document.addEventListener('keydown', pular);
+document.addEventListener('click', pular);
+
 
 
 
