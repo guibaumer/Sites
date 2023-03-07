@@ -11,13 +11,16 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         img {
-            width: 500px;
+            width: 80%;
+            max-width: 500px;
             align-self: center;
-            margin-top: 30px;
+            margin-top: 50px;
         }
         .container {
             display: flex;
             flex-direction: column;
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 93);
         }
         @keyframes letras {
             0% {
@@ -64,6 +67,13 @@
         function passar() {
             window.location.href = 'jogo.html'
         }
+        // Altura da viewport multiplicada por 1% para obter um valor para vh
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }); 
     </script>
 </body>
 </html>
