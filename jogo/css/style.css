@@ -1,0 +1,115 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    /* background-color: rgb(87, 49, 27);  */
+    background-image: linear-gradient(to bottom, rgb(99, 47, 26), rgb(87, 49, 27));  
+}
+.container {
+    width: 100%;
+    height: 500px;
+    /* border: 2px solid black; */
+    margin: 0 auto;
+    border-bottom: 20px solid rgb(4, 131, 13);
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgb(75, 171, 245), white);
+    display: flex;
+}
+.tubo {
+    width: 90px;
+    position: absolute;
+    bottom: 0;
+    animation-name: tubo-animacao;    
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+}
+.clouds {
+    position: absolute;
+    width: 900px;
+    right: -900px;
+    animation: cloud-movement 65s infinite;
+}
+.jump {
+    animation-name: pulos;   
+    animation-duration: 700ms;
+    animation-timing-function: ease-out;
+}
+
+@keyframes tubo-animacao {
+    from {
+        right: -90px;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes pulos {
+   
+    0% {
+        bottom: 0px;
+    }
+    40% {
+        bottom: 190px;
+    }
+    50% {
+        bottom: 190px;
+    }
+    60% {
+        bottom: 190px;
+    }
+    100% {
+        bottom: 0px;
+    }
+
+}
+@keyframes cloud-movement {
+    from {
+        right: -900px;
+    }
+    to {
+        right: 100vw;
+    }
+}
+.div-fim {
+    background-color: rgb(255, 255, 255);
+    text-shadow: 3px 2px 0px rgb(255, 255, 255);
+    background: none;
+    width: 300px;
+    height: 150px;
+    align-self: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: fantasy;
+    border-radius: 15px;
+    font-size: 3.1em;
+    z-index: 4;
+}
+.div-fim span {
+    font-size: .8em;
+    text-shadow: none;
+    margin-top: 15px;
+}
+.div-fim span:hover {
+    background-color: rgb(93, 167, 251);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgb(16, 127, 255);
+    cursor: pointer;
+}
+.pontos {
+    margin-top: 10px;
+    font-size: .6em;
+    text-shadow: none;
+}
