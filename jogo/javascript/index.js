@@ -9,11 +9,20 @@ window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }); 
+///////////////////////////////////////////////////
+
+let tempo = 2000;
+if(window.innerWidth <= 410) tempo = 1300;
+if(window.innerWidth > 410 && window.innerWidth <= 700) tempo = 1400;
+if(window.innerWidth > 700 && window.innerWidth < 850) tempo = 1600;
+
 let segundos = 0;
 let timer = setInterval(() => {
     segundos++;
-    console.log(segundos)
-}, 2000)
+}, tempo)
+
+
+///////////////////////////////////////////////////
 function pular() {
     mario.classList.add('jump')
     setTimeout(() => {
