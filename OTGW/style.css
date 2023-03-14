@@ -165,7 +165,7 @@ img#bell {
     background-color: rgb(0, 0, 0);
 }
 #b2 {
-    background-color: rgb(193, 186, 165);
+    background-color: var(--cor6);
     padding-top: 20px;
     padding-bottom: 20px;
     height: 780px;
