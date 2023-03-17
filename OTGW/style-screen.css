@@ -54,7 +54,8 @@
         transform: translateX(-50%);
     }
     section.texto {
-        width: 70%;
+        width: 70%; 
+        /* estava 70% */
         margin: auto;
     }
     #p1 {

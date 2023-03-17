@@ -4,9 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quem sou eu?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-screen.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="imgs/favicons/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .center {
+            text-align: center;
+            margin: 10px;
+        }
+        .voltar {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .www {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background-color:  rgb(227, 219, 193);
+            border-top: 40px solid rgb(228,204,158);
+            border-bottom: 40px solid rgb(228,204,158);
+        }
+        section.texto {
+            margin: 0;
+            height: fit-content;
+            width: 81%;
+        }
+    </style>
 </head>
 <body>
-    
+    <body id="important">
+   <header>
+    <span class="material-symbols-outlined span-hidden-menu">
+        menu
+        </span>
+        <img src="imgs/titulo-over-the-garden-wall.png" alt="logo com a escrita 'over the garden wall' na cor dourada" onclick="window.location.reload()">
+        <!-- <nav class="menu"><ul><li><a href="#b1">O Desconhecido</a></li><li><a href="#p2">Mortos?</a></li><li><a href="#b2">Purgatório</a></li><li><a href="#p3">Personagens</a></li></ul></nav> -->
+   </header>
+
+   <section class="hidden-menu">
+    <span class="material-symbols-outlined fecha-menu close-hidden-menu" id="xis-2">
+        close
+        </span>
+    <a href="#">Outros conteúdos</a>
+    <a href="fontes.html">Fontes-imagens</a> 
+    <a href="goals.html">Sobre</a>
+    <img src="imgs/pngegg.png" alt="">
+   </section>
+<main>
+
+    <section id="invisible">
+        <span class="material-symbols-outlined fecha-menu">
+            close
+            </span>
+       <p><a href="#">Outros conteúdos</a></p>
+       <!-- central.html -->
+       <p><a href="fontes.html">Fontes-imagens</a></p>
+       <p><a href="#">Sobre</a></p>
+       <!-- goals.html -->
+    </section>
+
+    <section class="www">
+        <section class="texto">
+            <h1>Quem sou eu?</h1>
+            <p>Me chamo Guilherme e estive estudando programação (voltada a desenvolvimento web como você já deve ter percebido) por algum tempo. Decidi por em prática tudo que acumulei até aqui, e já que sei criar textos que dão pro gasto, decidi escrever sobre uma série que gostei muito e na qual pude perceber um nível de detalhes ridiculamente elevado (no melhor sentido possível). Quando der, criarei novos textos sobre os mais diversos temas relacionados à série e compartilharei-os aqui. </p>
+            <div class="div-git"><a href="https://github.com/guibaumer"><img src="imgs/icons8-github.svg" alt="" class="github-logo"></a></div>
+            <p class="center">Veja minha página do Github apertando na logo acima, ou <a href="https://github.com/guibaumer">aqui</a>.</p>
+            <a href="o-segredo-alem-do-jardim-teorias.html" class="voltar">VOLTAR</a>
+        </section>
+    </section>
 </body>
 </html>
