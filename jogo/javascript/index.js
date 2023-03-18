@@ -74,7 +74,7 @@ function pontuar(seg) {
     div.innerText = `SUA PONTUAÇÃO: ${Math.floor(seg)}`;
     const divFim = document.querySelector('.div-fim')
     divFim.appendChild(div)
-    
+     
 }
 
 document.addEventListener('keydown', pular);
