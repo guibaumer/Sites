@@ -5,8 +5,18 @@ const section = document.querySelector('.container');
 const turtle = document.querySelector('.turtle');
 const iniciar = document.querySelector('.iniciar');
 const output = document.querySelector('.output');
-const output2 = document.querySelector('.seconds');
-// const marioId = document.querySelector('#mario-id');
+const marioId = document.querySelector('#mario-id');
+const bullet = document.querySelector('.bullet-bill');
+
+
+setTimeout(() => {
+    bullet.style.display = 'block';
+    bullet.style.animation = 'bullet-animation 2s infinite ease-in';
+    console.log('ok');
+}, 5000);
+setTimeout(() => {
+    bullet.style.display = 'none';
+}, 9000);
 
 // Altura da viewport multiplicada por 1% para obter um valor para vh
 let vh = window.innerHeight * 0.01;
@@ -16,7 +26,10 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }); 
 ///////////////////////////////////////////////////
-mario.src = 'imgs/mario-png.png'
+
+// bullet.style.animation = 'bullet-animation 2.5s infinite ease-in';
+
+marioId.src = 'imgs/mario-png.png'
 mario.classList.add('parado');
 let temporizador = 3;
 setInterval(() => {
@@ -25,9 +38,9 @@ setInterval(() => {
 }, 1000);
 
 function start() {
-    mario.src = 'imgs/supermario_knocmls3.gif'
+    marioId.src = 'imgs/supermario_knocmls3.gif'
     mario.classList.remove('parado');
-    tubo.style.display = 'block';
+    tubo.style.display = 'none';
     nuvem.style.display = 'block'; 
     iniciar.style.display = 'none';
     let tempo = 2000;
@@ -38,13 +51,7 @@ if(window.innerWidth > 700 && window.innerWidth < 850) tempo = 1600;
 let segundos = 0;
 let timer = setInterval(() => {
     segundos++;
-}, tempo);
-
-let segundosReais = 0;
-let pontosSegundos = setInterval(() => {
-    segundosReais++;
-    output2.innerHTML = segundosReais;
-}, 1000);
+}, tempo)
 
 
 ///////////////////////////////////////////////////
@@ -56,12 +63,15 @@ function pular() {
 }
 const loop = setInterval(() => {
     const posicaoTubo = tubo.offsetLeft; 
+    const posicaoTurtle = turtle.offsetLeft;
     const posicaoNuvem = nuvem.offsetLeft; 
+    const posicaoBill = bullet.offsetLeft;
     const posicaoMario = Number(window.getComputedStyle(mario).bottom.replace('px', ''))
-    if(posicaoTubo <= 129 && posicaoMario < 112 && posicaoTubo > 0) {
+    //
+    function morreu() {
         clearInterval(timer);
         mensagemMorte();
-        pontuar(segundosReais);
+        pontuar(segundos);
         tubo.style.animation = 'none';
         tubo.style.left = `${posicaoTubo}px`;
         mario.style.animation = 'none';
@@ -72,24 +82,48 @@ const loop = setInterval(() => {
         nuvem.style.animation = 'none'
         nuvem.style.left = `${posicaoNuvem}px`;
         clearInterval(loop);
-        clearInterval(pontosSegundos);
     }
-    if(segundos >= 5) turtle.style.display = 'block'
-    if(segundos >= 10) {
+    //
+    if(posicaoTubo <= 129 && posicaoMario < 112 && posicaoTubo > 0) {
+        clearInterval(timer);
+        mensagemMorte();
+        pontuar(segundos);
         tubo.style.animation = 'none';
-    tubo.style.left = `${posicaoTubo}px`;
-    nuvem.style.animation = 'none'
-    nuvem.style.left = `${posicaoNuvem}px`;
-    mario.src = 'imgs/pngegg.png';
-    mario.classList.add('mario-vitoria');
-    nuvem.style.animation = 'none';
-    turtle.style.animation = 'none';
-       clearInterval(timer);
-       clearInterval(loop);
-       setTimeout(() => {
-       window.location.href = 'fase2.html'
-       }, 3000)
+        tubo.style.left = `${posicaoTubo}px`;
+        mario.style.animation = 'none';
+        mario.style.bottom = `${posicaoMario}px`;
+        mario.src = './imgs/mario-morto.webp';
+        mario.style.width = '80px';
+        mario.style.left = '59px'
+        nuvem.style.animation = 'none'
+        nuvem.style.left = `${posicaoNuvem}px`;
+        clearInterval(loop);
     }
+    if(posicaoMario > 30 && posicaoTurtle <= 102 && posicaoTurtle > 0) {
+        // 129
+        morreu()
+        turtle.style.left = `${posicaoTurtle}px`;
+        turtle.style.animation = "none";
+    }
+    if(posicaoMario < 90 && posicaoBill <= 138 && posicaoBill > 0) { //-75
+        console.log('ah')
+        morreu();
+        bullet.style.left = `${posicaoBill}px`;
+        bullet.style.animation = 'none';
+    }
+    // if(segundos >= 2) {
+    //     turtle.style.display = 'block';
+    //     tubo.style.display = 'none';
+    //     turtle.style.animation = 'turtle-animacao-completa 3s infinite'
+    //     turtle.style.animationTimingFunction = 'linear'
+    // } 
+
+    // if(segundos >= 10) {
+    //    console.log('ganhou');
+    //    clearInterval(timer);
+    //    clearInterval(loop);
+    //    window.location.href = 'fase2.html'
+    // }
 
 }, 10);
 function mensagemMorte() {
@@ -105,12 +139,11 @@ function mensagemMorte() {
     section.appendChild(div);
     reiniciar();
 }
-
 function reiniciar() {
     const restart = document.querySelector('.material-symbols-outlined');
     restart.addEventListener('click', () => {
         document.location.reload();
-    })
+    });
 }
 function pontuar(seg) {
     const div = document.createElement('div');
@@ -128,9 +161,6 @@ document.addEventListener('keydown', pular);
 document.addEventListener('click', pular);
 }
 
-
 setTimeout(() => {
     start();
-}, 3000)
-
-
+}, 3000) 
