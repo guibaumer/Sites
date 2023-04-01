@@ -229,9 +229,12 @@ function ativaBill() {
     billBala.style.animationIterationCount = '2';
     if(window.innerWidth <= 530) {
         billBala.style.animationDuration = '1.5s';
-        console.log('aqui');
         tempo = 3000;
-    } else {
+        console.log('aqui');
+    } else if(window.innerWidth > 530 && window.innerWidth <= 600) {
+        billBala.style.animationDuration = '1.4s';
+        tempo = 2800;
+    }else {
         billBala.style.animationDuration = '2s';
     }
 
