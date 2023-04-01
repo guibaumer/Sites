@@ -109,7 +109,7 @@ const loop = setInterval(() => {
         turtle.src = 'imgs/turtle-png.png';
         turtle.style.left = `${posicaoTurtle}px`;
     }
-    if(posicaoMario < 90 && posicaoBill <= 138 && posicaoBill > -60) { //-75
+    if(posicaoMario < 90 && posicaoBill <= 135 && posicaoBill > 0) { //-60
         console.log(posicaoBill);
         morreu();
         billBala.style.animation = 'none';
@@ -215,6 +215,8 @@ function animacaoDotubo() {
     
 };
 function ativaBill() {
+    // if(window.inner)
+    let tempo = 4000;
     turtle.style.display = 'none';
     turtle.style.animation = 'none';
     tubo.style.display = 'none';
@@ -222,14 +224,22 @@ function ativaBill() {
 
     billBala.style.display = 'block';
     billBala.style.animationName = 'bullet-animation';
-    billBala.style.animationDuration = '2s';
-    billBala.style.animationTimingFunction = 'linear';
+    billBala.style.animationTimingFunction = 'ease-in';
+    // billBala.style.animationTimingFunction = 'linear';
     billBala.style.animationIterationCount = '2';
+    if(window.innerWidth <= 530) {
+        billBala.style.animationDuration = '1.5s';
+        console.log('aqui');
+        tempo = 3000;
+    } else {
+        billBala.style.animationDuration = '2s';
+    }
+
 
     const disapear = setTimeout(() => {
         billBala.style.display = 'none';
         billBala.style.animation = 'none';
-    }, 4000);
+    }, tempo);
     
     setInterval(() => {        
         if(estado === 'MORTO') clearTimeout(disapear);
