@@ -288,6 +288,9 @@ section.iniciar h1 {
     .orientation {
         display: flex;
     }
+    output.seconds {
+        display: none;
+    }
     .container {
         display: none;
     }
