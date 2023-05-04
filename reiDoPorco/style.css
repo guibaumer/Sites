@@ -57,10 +57,8 @@ nav div {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     transition: width .5s ease-in-out;
-    /* border-radius: 0px 0px 40px 40px; */
     text-align: right;
 }
-
 nav a {
     font-size: 1.3rem;
     color: white;
@@ -69,7 +67,6 @@ nav a {
     padding: 1px;
 }
 nav a:hover {
-    /* font-weight: bold; */
     background-color: #464242;
 }
 .section {
@@ -119,7 +116,6 @@ section.texto.texto-completo div {
     background-color: white;
 }
 .sec-head {
-    /* background-image: url(imgs/back-2.png); */
     background-image: url(imgs/porco-fundo.png);
     background-position: center center;
     background-size: cover;
@@ -129,6 +125,7 @@ section.texto.texto-completo div {
     align-items: flex-start;
     flex-direction: column;
     color: black;
+    min-height: 100vh;
 }
 .div-text-top {
     padding: 4rem;
@@ -141,7 +138,6 @@ section.texto.texto-completo div {
 .div-text-top h2 {
     font-size: 4rem;
     margin-bottom: 30px;
-
 }
 .sec-head .div-text-top p {
     font-size: 1.6rem;
@@ -291,6 +287,7 @@ div.div-span {
     align-items: center;
     justify-content: space-between; 
     border-radius: 0px 0px 0px 40px;
+    padding: 0px;
 }
 section .texto.texto-solido {
     background-color: white;
@@ -367,14 +364,18 @@ section#section-contato div.contato span.entre-contato a:hover {
     transition: .3s ease-in;
 }
 section#section-contato div.contato span.entre-contato:hover {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     transition: .3s ease-in;
 }
 
 
 
-
+@media (max-width: 360px) {
+    ul.lista a {
+        font-size: 1rem;
+    }
+}
 @media (max-width:490px) {
     nav a {
         font-size: 1.3rem;
@@ -384,18 +385,31 @@ section#section-contato div.contato span.entre-contato:hover {
     nav div {
         padding: 1rem;
     }
-    .div-text-top {
-        padding: 1rem;
-    }
     .sec-head h1 {
         font-size: 5rem;
         width: 60%;
     }
-    .sec-head p {
-        color: white;
-        font-size: 2rem;
-        max-width: 60%;
+    .sec-head .div-text-top div p {
+        /* color: white; */
+        font-size: 1.4rem; 
+        /* max-width: 60%; */
     }
+    section#section-contato div.contato {
+        font-size: 1.2rem;
+        padding: .2rem;
+        margin: 10px;
+    }
+    #section-contato div span {
+        padding: .2rem;
+    }
+    div.div-span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        border-radius: 0px 0px 0px 40px;
+        padding-right: .9rem;
+    }
+    
 }
 
 @media (max-width:580px) {
@@ -405,12 +419,14 @@ section#section-contato div.contato span.entre-contato:hover {
     .home p {
         font-size: 2rem;
     }
+
 }
 
 @media (max-width:1402px) {
     main section.texto.texto-completo {
         max-width: none;
-        width: 100vw;
+        /* width: 100vw; */
+        width: 100%;
         display: flex;
         justify-content: center;
     }
@@ -429,14 +445,21 @@ section#section-contato div.contato span.entre-contato:hover {
     padding: 0px;
     width: 100%;
     text-align: center;
+    color: black;
    }
    .sec-head {
     background-image: none;
     background-color: #FFF;
    }
    .div-text-top h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+.div-text-top p {
+    color: black;
+}
+.div-text-top div {
+    width: 100%;
 }
 div.div-text-top.section div:nth-child(1) {
     display: flex;
