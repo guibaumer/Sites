@@ -287,7 +287,7 @@ div.div-span {
     align-items: center;
     justify-content: space-between; 
     border-radius: 0px 0px 0px 40px;
-    padding: 0px;
+    padding: 10px;
 }
 section .texto.texto-solido {
     background-color: white;
@@ -409,7 +409,6 @@ section#section-contato div.contato span.entre-contato:hover {
         border-radius: 0px 0px 0px 40px;
         padding-right: .9rem;
     }
-    
 }
 
 @media (max-width:580px) {
