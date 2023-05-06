@@ -112,7 +112,7 @@ p.line {
 
 @media (min-width:350px) {
     :root {
-        --variavel: 350;
+        --variavel: 350px;
     }
     main h1 {
         font-size: 8rem;
