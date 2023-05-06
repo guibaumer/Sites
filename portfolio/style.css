@@ -83,6 +83,13 @@ p.line {
 .typing-animation {
     animation: typing 4s steps(40) 1s, blink 500ms steps(40) infinite;
 }
+.svg-icons {
+    fill: red;
+}
+.svg-icons img {
+    width: 5rem;
+    margin-right: 1rem;
+}
 @keyframes typing {
     from {
         width: 0px;
