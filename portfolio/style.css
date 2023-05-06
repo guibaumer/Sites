@@ -75,7 +75,7 @@ main h1 {
 }
 p.line {
     border-right: 2px solid rgba(255, 255, 255, 0.75);
-    width: var(--variavel);
+    width: calc(var(--variavel) + 10px);
     white-space: nowrap;
     overflow: hidden;
     font-family: monospace;
@@ -95,7 +95,7 @@ p.line {
         width: 0px;
     }
     to {
-        width: var(--variavel);
+        width: calc(var(--variavel) + 10px);
     }
 }
 @keyframes blink {
@@ -112,7 +112,7 @@ p.line {
 
 @media (min-width:350px) {
     :root {
-        --variavel: 350px;
+        --variavel: 350;
     }
     main h1 {
         font-size: 8rem;
