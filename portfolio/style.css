@@ -69,7 +69,7 @@ main h1 {
 .home-section p {
     color: rgb(255, 255, 255);
     font-size: 1.6rem;
-    width: 270px;
+    /* width: 270px; */
     margin-top: 2rem;
     text-align: center;
 }
