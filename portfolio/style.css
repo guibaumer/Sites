@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1.8rem;
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+section.section {
+    min-height: 100vh;
+}
+section.section:nth-child(odd) {
+    background-color: aquamarine;
+}
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* background-color: #fff; */
+    background-color: #331610;
+    color: #FFF;
+    position: fixed;
+    width: 100%;
+}
+section.home-section {
+    background-image: url('imgs/Fallout_\ New\ Vegas.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main h1 {
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+    font-size: 6rem;
+    color: #FFF;
+    line-height: 6rem;
+    text-align: center;
+}
+.home-section p {
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    width: 270px;
+    /* font-style: italic; */
+
+    margin-top: 2rem;
+    text-align: center;
+
+    /* background-color: rgb(253, 253, 253); */
+    /* padding: .3rem; */
+    /* box-shadow: 0px 0px 4px rgb(255, 255, 255); */
+    /* border-radius: .5rem; */
+    
+}
+p.line {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    width: 270px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: monospace;
+}
+.typing-animation {
+    animation: typing 4s steps(40) 1s, blink 500ms steps(40) infinite;
+}
+@keyframes typing {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 270px;
+    }
+}
+@keyframes blink {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
