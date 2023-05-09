@@ -20,6 +20,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 section.section {
     min-height: 100vh;
 }
@@ -80,9 +81,10 @@ p.line {
     white-space: nowrap;
     overflow: hidden;
     font-family: monospace;
+    /* width: 0px; */
 }
 .typing-animation {
-    animation: typing 4s steps(40) 1s, blink 500ms steps(40) infinite;
+    animation: typing 4s steps(40) , blink 500ms steps(40) infinite;
 }
 .svg-icons {
     fill: red;
@@ -91,9 +93,24 @@ p.line {
     width: 5rem;
     margin-right: 1rem;
 }
+.svg-div {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 8rem;
+    width: 100%;
+    max-width: 500px;
+    /* background-color: white; */
+    text-align: center;
+}
+img.svg {
+    width: 5rem;
+    animation: rotation 1.2s;
+}
 span:hover {
     cursor: pointer;
 }
+
 
 .nav-menu ul {
     display: flex;
@@ -122,7 +139,7 @@ span:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* display: none; */
+    display: none;
     padding: 0rem;
     text-align: center;
     background-color: #0d0d0d;
@@ -159,7 +176,60 @@ span:hover {
     right: 2rem;
     color: red;
 }
+div.svg-icons img:hover {
+    background-color: white;
+    border-radius: 50%;
+    padding: 1px;
+    /* width: 1rem; */
+}
+div.svg-icons img:active {
+    background-color: #808080;
+}
+ul li a:active {
+    color: #808080;
+}
 
+
+
+/* SEGUNDA SECTION */
+section.whoAmI {
+    /* background-image: ; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.whoAmI p {
+    text-indent: 3rem;
+}
+div.dados {
+    text-align: justify;
+    padding: 0;
+}
+h2 {
+    text-align: center;
+    padding: .5rem;
+}
+div.foto {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: red;
+}
+
+
+
+
+
+/* TERCEIRA SECTION */
+section.skills {
+    /* background-image: ; */
+}
+
+
+
+/* ANIMAÇÕES */
 @keyframes typing {
     from {
         width: 0px;
@@ -178,10 +248,20 @@ span:hover {
         border-right-color: transparent;
     }
 }
+@keyframes rotation {
+    from {
+        transform: rotate(350deg) scale(1.3);
+    }    
+    to {
+        transform: rotate(0deg) scale(1.0);
+    }
+}
 
 
 
 
+
+/* MEDIA QUERIES */
 @media (min-width:350px) {
     :root {
         --variavel: 310px;
@@ -196,9 +276,11 @@ span:hover {
     span.material-symbols-outlined {
         font-size: 3.5rem;
         margin-right: 1rem;
-
-        /* color: rgb(212, 255, 38); */
     }
+    img.svg {
+        width: 6rem;
+    }
+   
 }
 @media (min-width: 576px) {
     .nav-menu {
@@ -218,19 +300,35 @@ span:hover {
 
 }
 @media (min-width: 992px) {
-
+    section.whoAmI {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .whoAmI div {
+        width: 50%;
+    }
 }
 @media (min-width: 1200px) {
+    :root {
+        --variavel: 340px;
+    }
     section.home-section {
         background-image: url('imgs/ceu-renascentista-landscape.jpg');
         background-position: center center;
     }
+    .home-section p {
+        font-size: 1.9rem;
+    }
     .nav-menu {
         display: flex;
-        background-color: #33161066;
+        /* background-color: #33161066; */
+        background-color: #331610;
+
         position: fixed;
         width: 100%;
         padding: 1rem;
+        font-family: 'Work Sans';
     }
     main h1 {
         font-size: 10rem;
