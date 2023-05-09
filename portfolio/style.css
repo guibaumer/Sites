@@ -176,7 +176,7 @@ span:hover {
 
 @media (min-width:350px) {
     :root {
-        --variavel: 350px;
+        --variavel: 270px;
     }
     main h1 {
         font-size: 8rem;
@@ -196,6 +196,8 @@ span:hover {
     span.material-symbols-outlined {
         font-size: 3.5rem;
         margin-right: 1rem;
+
+        color: seagreen;
     }
 }
 @media (min-width: 768px) {
