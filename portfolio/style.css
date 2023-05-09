@@ -177,7 +177,7 @@ span:hover {
 
 @media (min-width:350px) {
     :root {
-        --variavel: 290px;
+        --variavel: 310px;
     }
     main h1 {
         font-size: 8rem;
