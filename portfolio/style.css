@@ -176,14 +176,14 @@ span:hover {
 
 @media (min-width:350px) {
     :root {
-        --variavel: 270px;
+        --variavel: 290px;
     }
     main h1 {
         font-size: 8rem;
         line-height: 8rem;
     }
     .home-section p {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 }
 @media (min-width: 576px) {
