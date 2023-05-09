@@ -17,15 +17,37 @@
 </head>
 <body>
     <nav class="nav-menu">
+
         <div class="svg-icons">
             <img src="imgs/svgs/github-142-svgrepo-com.svg" alt="">
             <img src="imgs/svgs/linkedin-round-svgrepo-com.svg" alt="">
         </div>
-        <span class="material-symbols-outlined">menu</span>
+
+        <ul>
+            <li><a href="#">Quem sou?</a></li>
+            <li><a href="#">Habilidades</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+
+        <span class="material-symbols-outlined material-symbols-outlined-menu">
+            menu
+        </span>
+
     </nav>
     <main>
         <section class="section home-section">
-        
+            <div class="hidden">
+                <ul>
+                    <span class="material-symbols-outlined material-symbols-outlined-close">
+                        close
+                        </span>
+                    <li><a href="#">Quem sou?</a></li>
+                    <li><a href="#">Habilidades</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>        
+            </div>
 
             <h1>Guilherme<br>Baumer</h1>
             <p class="line typing-animation">Estudante de desenvolvimento web.</p>
@@ -37,5 +59,6 @@
     <footer>
         <p>Site criado por <a href="#">Guilherme</a></p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
