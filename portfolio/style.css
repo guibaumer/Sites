@@ -46,6 +46,7 @@ footer {
 }
 span.material-symbols-outlined {
     font-size: 4rem;
+    color: turquoise;
 }
 section.home-section {
     background-image: url('imgs/ceu-editado.jpg');
@@ -184,6 +185,12 @@ span:hover {
     }
     .home-section p {
         font-size: 1.6rem;
+    }
+    span.material-symbols-outlined {
+        font-size: 3.5rem;
+        margin-right: 1rem;
+
+        color: rgb(212, 255, 38);
     }
 }
 @media (min-width: 576px) {
