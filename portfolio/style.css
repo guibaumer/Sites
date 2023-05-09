@@ -46,7 +46,7 @@ footer {
 }
 span.material-symbols-outlined {
     font-size: 4rem;
-    color: turquoise;
+    /* color: turquoise; */
 }
 section.home-section {
     background-image: url('imgs/ceu-editado.jpg');
