@@ -7,6 +7,8 @@
 }
 :root {
     --variavel: 270px;
+    --fonteh1: 'Anton', sans-serif;
+    --transform-value: 60px;
 }
 html {
     font-size: 62.5%;
@@ -39,23 +41,30 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    background-color: #331610;
+    /* background-color: #331610; */
+
+    background-color: #000;
+
     /* background-image: linear-gradient(to right, #27110c, #331610); */
     color: #FFF;
     position: fixed;
     width: 100%;
+    z-index: 3;
 }
 span.material-symbols-outlined {
     font-size: 4rem;
     /* color: turquoise; */
 }
 section.home-section {
-    background-image: url('imgs/ceu-editado.jpg');
+    /* background-image: url('imgs/ceu-editado.jpg'); */
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-image: linear-gradient(to top right, #EDEDED, #9FB3BF);
+
 }
 main h1 {
     text-transform: uppercase;
@@ -76,12 +85,12 @@ main h1 {
     text-align: center;
 }
 p.line {
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
     width: calc(var(--variavel) + 10px);
     white-space: nowrap;
     overflow: hidden;
-    font-family: monospace;
-    /* width: 0px; */
+    /* font-family: monospace; */
+    /* border-right: 2px solid rgba(255, 255, 255, 0.75); */
+    font-family: 'Open Sans', sans-serif;
 }
 .typing-animation {
     animation: typing 4s steps(40) , blink 500ms steps(40) infinite;
@@ -102,6 +111,37 @@ p.line {
     max-width: 500px;
     /* background-color: white; */
     text-align: center;
+
+    display: none;
+
+}
+.arrow-down {
+    width: 40px;
+    transform: translateY(var(--transform-value));
+
+    border-radius: 50%;
+    padding: 5px 7px 3px 7px;
+    background-color: #F2DA6D;
+    
+    transition: .3s ease-in-out;
+    animation: piscar 1s infinite;
+}
+.arrow-down:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    animation-play-state: paused;
+}
+@keyframes piscar {
+    from {
+        /* background-color: white; */
+    transform: translateY(var(--transform-value));
+
+    }
+    to {
+        /* background-color: #ffff00; */
+    transform: translateY(80px);
+
+    }
 }
 img.svg {
     width: 5rem;
@@ -149,6 +189,7 @@ span:hover {
     height: 30rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    z-index: 4;
 }
 .hidden ul {
     /* text-align: center; */
@@ -176,11 +217,13 @@ span:hover {
     right: 2rem;
     color: red;
 }
-div.svg-icons img:hover {
-    background-color: white;
+div.svg-icons img {
+    background-color: #EDEDED;
     border-radius: 50%;
     padding: 1px;
-    /* width: 1rem; */
+}
+div.svg-icons img:hover {
+    padding: 3px;
 }
 div.svg-icons img:active {
     background-color: #808080;
@@ -194,6 +237,7 @@ ul li a:active {
 /* SEGUNDA SECTION */
 section.whoAmI {
     /* background-image: ; */
+    background-color: #EDEDED;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -237,16 +281,16 @@ section.skills {
 
 
 /* ANIMAÇÕES */
-@keyframes typing {
+
+ @keyframes typing {
     from {
         width: 0px;
-        background-color: #838080;
+        background-color: #9FB3BF;
     }
     to {
         width: calc(var(--variavel) + 10px);
-        background-color: #838080;
     }
-}
+} 
 @keyframes blink {
     from {
         border-right-color: rgba(255, 255, 255, 0.75);
@@ -255,6 +299,7 @@ section.skills {
         border-right-color: transparent;
     }
 }
+
 @keyframes rotation {
     from {
         transform: rotate(350deg) scale(1.3);
@@ -262,6 +307,12 @@ section.skills {
     to {
         transform: rotate(0deg) scale(1.0);
     }
+    /* from {
+        transform: translateY(300px);
+    }
+    to {
+        transform: translateY(0px);
+    } */
 }
 
 
@@ -291,7 +342,6 @@ section.skills {
 }
 @media (min-width: 576px) {
     .nav-menu {
-        background-color: #331610;
         position: fixed;
         width: 100%;
         padding: 1rem;
@@ -302,36 +352,107 @@ section.skills {
 
         color: seagreen;
     }
-}
-@media (min-width: 768px) {
+
+
+
 
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     section.whoAmI {
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
+    div.foto {
+        text-align: center;
+    }
+    .minha-foto {
+        width: 30rem;
+        height: 30rem;
+    }
+    section.whoAmI {
+        text-align: center;
+    }
+    .whoAmI p {
+        text-indent: 3rem;
+        max-width: 40rem;
+    }
+    .whoAmI h2 {
+        text-align: center;
+        max-width: 40rem;
+    }
     .whoAmI div {
         width: 50%;
     }
+
+}
+@media (min-width: 992px) {
+    .whoAmI {
+        background-size: cover;
+    }
+    section.whoAmI {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .whoAmI h2 {
+        max-width: 45rem;
+        font-family: var(--fonteh1);
+        font-size: 5rem;
+        font-weight: normal;
+    }
+    .whoAmI p {
+        max-width: 65rem; 
+        /* 45rem */
+        font-size: 2.1rem;
+        text-align: justify;
+        margin-bottom: 1.5rem;
+    }
+    .whoAmI div {
+        width: 40%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .whoAmI div:nth-child(2) {
+        width: 60%;
+    }
+/*     
+    div.foto {
+        text-align: center;
+    }
+    .minha-foto {
+        width: 30rem;
+        height: 30rem;
+    }
+    section.whoAmI {
+        text-align: center;
+    }
+    .whoAmI p {
+        text-indent: 3rem;
+        max-width: 55rem;
+    }
+    .whoAmI h2 {
+        text-align: center;
+        max-width: 55rem;
+    } */
 }
 @media (min-width: 1200px) {
     :root {
         --variavel: 340px;
     }
     section.home-section {
-        background-image: url('imgs/ceu-renascentista-landscape.jpg');
-        background-position: center center;
+        /* background-image: url('imgs/ceu-renascentista-landscape.jpg'); */
+        /* background-position: center center; */
     }
     .home-section p {
         font-size: 1.9rem;
     }
     .nav-menu {
         display: flex;
-        /* background-color: #33161066; */
-        background-color: #331610;
-
+        /* background-color: #331610; */
         position: fixed;
         width: 100%;
         padding: 1rem;
@@ -350,6 +471,12 @@ section.skills {
     .nav-menu ul {
         display: flex;
     }
+    .minha-foto {
+        width: 40rem;
+        height: 40rem;
+    }
+
+   
 }
 
 
