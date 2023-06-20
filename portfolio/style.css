@@ -63,6 +63,8 @@ section.home-section {
     justify-content: center;
     align-items: center;
 
+}
+.background-degrade {
     background-image: linear-gradient(to top right, #EDEDED, #9FB3BF);
 
 }
@@ -245,15 +247,23 @@ section.whoAmI {
     padding: 2rem;
 }
 .whoAmI p {
-    text-indent: 3rem;
+    text-indent: 0rem;
 }
 div.dados {
     text-align: justify;
+    /* justify */
     padding: 0;
 }
 h2 {
     text-align: center;
     padding: .5rem;
+    font-family: var(--fonteh1);
+    font-size: 5rem;
+    font-weight: normal;
+    padding-bottom: 4rem;
+}
+section.whoAmI h2 {
+    padding-bottom: 1rem;
 }
 div.foto {
     /* width: 25rem; */
@@ -276,6 +286,148 @@ div.foto {
 /* TERCEIRA SECTION */
 section.skills {
     /* background-image: ; */
+    background-image: linear-gradient(to bottom, #EDEDED, #9FB3BF);
+    padding-bottom: 2rem;
+}
+/* here */
+/* .skills h2 {
+    font-family: var(--fonteh1);
+    font-size: 5rem;
+    font-weight: normal;
+    padding-bottom: 4rem;
+} */
+.grid {
+    /* background-color: #f0e5b7; */
+    width: 90%;
+    margin: auto;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+div.curso {
+    height: 250px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid #ffffffb3;
+    border-radius: 10px;
+    color: #fff;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.curso:hover {
+    transform: translatey(-10px);
+    transition: .2s ease-in-out;
+    border-color: #05b505a9;
+}
+.curso.incompleto:hover {
+    border-color: rgba(255, 0, 0, 0.71);
+}
+.tipo {
+    padding: 10px;
+}
+.nome {
+    padding: 30px 5px 0px 30px;
+    /* font-size: 2.4rem; */
+    font-size: 3rem;
+    font-weight: normal;
+    font-family: var(--fonteh1);
+}
+.nome a:hover {
+    text-decoration: underline; 
+}
+.fornecedor {
+    padding: 10px 20px 0px 30px;
+    font-size: 1.5rem;
+    font-family: var(--fonteh1);
+    font-style: italic;
+    text-align: right;
+
+}
+.estado {
+    text-align: center;
+    width: 100%;
+    border-radius: 0px 0px 6px 6px;
+    padding: 3px;
+    margin: auto;
+    background-color: #EDEDED;
+    color: #05b505;
+    /* transform: translateY(30px); */
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+}
+.cursando {
+    color: red;
+}
+.pt-0 h4 {
+    padding-top: 0px;
+}
+
+section.projetos {
+    background-image: linear-gradient(to bottom, #9FB3BF, #8798a3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projetos p {
+    text-align: justify;
+}
+.projetos div.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.project {
+    width: 90%;
+    min-width: 20rem;
+    max-width: 40rem;
+    height: 30rem;
+    background-color: #FFF;
+    border-radius: 10px;   
+
+    background-image: url(imgs/miniatura/Captura\ de\ tela\ 2023-06-20\ 202950.png);
+    background-size: cover;
+    background-position: center center;
+}
+.project-data {
+    width: 90%;
+    min-width: 20rem;
+    max-width: 40rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project-data h4 {
+    font-size: 3rem;
+    font-family: var(--fonteh1);
+    font-weight: normal;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section.section.contato {
+    /* background-color: #9FB3BF; */
+    background-color: #ffffff;
 }
 
 
@@ -307,12 +459,6 @@ section.skills {
     to {
         transform: rotate(0deg) scale(1.0);
     }
-    /* from {
-        transform: translateY(300px);
-    }
-    to {
-        transform: translateY(0px);
-    } */
 }
 
 
@@ -374,7 +520,7 @@ section.skills {
         text-align: center;
     }
     .whoAmI p {
-        text-indent: 3rem;
+        /* text-indent: 3rem; */
         max-width: 40rem;
     }
     .whoAmI h2 {
@@ -419,25 +565,15 @@ section.skills {
     .whoAmI div:nth-child(2) {
         width: 60%;
     }
-/*     
-    div.foto {
-        text-align: center;
+    .projetos h2 {
+        padding-top: 2rem;
     }
-    .minha-foto {
-        width: 30rem;
-        height: 30rem;
+    .projetos div.container:nth-child(even) {
+        flex-direction: row;
     }
-    section.whoAmI {
-        text-align: center;
+    .projetos div.container:nth-child(odd) {
+        flex-direction: row-reverse;
     }
-    .whoAmI p {
-        text-indent: 3rem;
-        max-width: 55rem;
-    }
-    .whoAmI h2 {
-        text-align: center;
-        max-width: 55rem;
-    } */
 }
 @media (min-width: 1200px) {
     :root {
