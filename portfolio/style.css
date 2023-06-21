@@ -373,6 +373,14 @@ section.projetos {
     justify-content: center;
     align-items: center;
 }
+.projetos h2 {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+.projetos h4 {
+    
+}
+
 .projetos p {
     text-align: justify;
 }
@@ -392,7 +400,6 @@ section.projetos {
     height: 30rem;
     background-color: #FFF;
     border-radius: 10px;   
-
     background-image: url(imgs/miniatura/Captura\ de\ tela\ 2023-06-20\ 202950.png);
     background-size: cover;
     background-position: center center;
@@ -410,9 +417,35 @@ section.projetos {
 .project-data h4 {
     font-size: 3rem;
     font-family: var(--fonteh1);
-    font-weight: normal;
-    
+    font-weight: normal;   
 }
+.projetos a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+a.visitar-site {
+    background: none;
+    border: 3px solid black;
+    color: #000000;
+    padding: .6rem;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+.visitar-site:hover {
+    background-color: #000;
+    color: #FFF;
+    transition: .4s ease-out;
+}
+.project-2 {
+    background-image: url(imgs/miniatura/Captura\ de\ tela\ 2023-06-21\ 170736.png);
+    background-position: left bottom;
+}
+.project-3 {
+    background-image: url(imgs/miniatura/whatsapp.png);
+    background-position: left bottom;
+}
+
+
 
 
 
