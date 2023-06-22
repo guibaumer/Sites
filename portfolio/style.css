@@ -22,7 +22,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
 section.section {
     min-height: 100vh;
 }
@@ -35,6 +34,12 @@ footer {
     padding: 1rem;
     text-align: center;
     font-style: italic;
+}
+footer a {
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
 }
 .nav-menu {
     display: flex;
@@ -255,6 +260,8 @@ div.dados {
     padding: 0;
 }
 h2 {
+
+    text-transform: uppercase;
     text-align: center;
     padding: .5rem;
     font-family: var(--fonteh1);
@@ -392,9 +399,22 @@ section.projetos {
     gap: 2rem;
     align-items: center;
     margin-bottom: 4rem;
+
+    /* background-color: rgba(255, 255, 255, 0.75);
+    padding: 3rem;
+    width: 900px;
+    border-radius: 2rem;
+    color: #000000; */
+
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 3rem;
+    width: 93%;
+    max-width: 900px;
+    border-radius: 2rem;
+    color: #000000;
 }
 .project {
-    width: 90%;
+    width: 100%;
     min-width: 20rem;
     max-width: 40rem;
     height: 30rem;
@@ -420,21 +440,21 @@ section.projetos {
     font-weight: normal;   
 }
 .projetos a {
-    text-decoration: underline;
-    font-weight: bold;
+    /* text-decoration: underline; */
+    font-weight: bold; 
 }
 a.visitar-site {
-    background: none;
+    /* background: none; */
+    background-color: #000;
     border: 3px solid black;
-    color: #000000;
+    color: #ffffff;
     padding: .6rem;
     text-decoration: none;
     margin-top: 1rem;
+    border-radius: 5px;
 }
 .visitar-site:hover {
-    background-color: #000;
-    color: #FFF;
-    transition: .4s ease-out;
+    color: #ffffffcf;
 }
 .project-2 {
     background-image: url(imgs/miniatura/Captura\ de\ tela\ 2023-06-21\ 170736.png);
@@ -445,10 +465,49 @@ a.visitar-site {
     background-position: left bottom;
 }
 
-
-
-
-
+.contato h2 {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+.contato p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.contato a {
+    display: block;
+    text-align: center;
+    width: 100px;
+    padding: .5rem;
+    background-color: #000000ef;
+    color: #606060;
+    margin: .5rem;
+    border-radius: 2rem;
+    border: .3rem solid #000;
+}
+.contato a:hover {
+    background: none;
+    transition: .6s;
+    color: #000;
+    background-color: #F2DA6D;
+}
+.contato div {
+    display: flex;
+    margin: 1.1rem auto;
+    justify-content: center;
+    align-items: center;
+}
+.negrito {
+    font-weight: bold;
+    cursor: none;
+}
+.fallout {
+    width: 300px;
+    height: 300px;
+}
+.contato img {
+    width: 150px;
+    margin-top: 3rem;
+}
 
 
 
@@ -461,6 +520,22 @@ a.visitar-site {
 section.section.contato {
     /* background-color: #9FB3BF; */
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-shadow {
+    /* width: fit-content; */
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    box-shadow: 0px 0px 4px #c5ced5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5ced5;
 }
 
 
