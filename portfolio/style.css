@@ -420,9 +420,11 @@ section.projetos {
     height: 30rem;
     background-color: #FFF;
     border-radius: 10px;   
-    background-image: url(imgs/miniatura/Captura\ de\ tela\ 2023-06-20\ 202950.png);
+    background-image: url(imgs/miniatura/gera-cpfs.png);
     background-size: cover;
     background-position: center center;
+    box-shadow: 0px 0px 4px #61606051;
+
 }
 .project-data {
     width: 90%;
@@ -457,14 +459,20 @@ a.visitar-site {
     color: #ffffffcf;
 }
 .project-2 {
-    background-image: url(imgs/miniatura/Captura\ de\ tela\ 2023-06-21\ 170736.png);
+    background-image: url(imgs/miniatura/doceria.png);
     background-position: left bottom;
 }
 .project-3 {
     background-image: url(imgs/miniatura/whatsapp.png);
     background-position: left bottom;
 }
-
+.project-4 {
+    background-image: url(imgs/miniatura/google-clone.png);
+    background-position: left bottom;
+}
+.project-5 {
+    background-image: url(imgs/miniatura/gerador-de-senhas.png);
+}
 .contato h2 {
     padding-top: 1rem;
     padding-bottom: 2rem;
