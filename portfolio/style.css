@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+:root {
+    --amarelo-detalhes: #F2DA6D;
+    --cor-clara: #EDEDED;
+    --azul: #9FB3BF;
+    --cinza: #c5ced5;
+    --tom-escuro: #8798a3;
+}
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +33,7 @@ section.section {
     min-height: 100vh;
 }
 section.section:nth-child(odd) {
-    background-color: aquamarine;
+    background-color: #FFF;
 }
 footer {
     background-color: #000;
@@ -46,11 +53,7 @@ footer a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    /* background-color: #331610; */
-
     background-color: #000;
-
-    /* background-image: linear-gradient(to right, #27110c, #331610); */
     color: #FFF;
     position: fixed;
     width: 100%;
@@ -58,20 +61,16 @@ footer a:hover {
 }
 span.material-symbols-outlined {
     font-size: 4rem;
-    /* color: turquoise; */
 }
 section.home-section {
-    /* background-image: url('imgs/ceu-editado.jpg'); */
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 .background-degrade {
-    background-image: linear-gradient(to top right, #EDEDED, #9FB3BF);
-
+    background-image: linear-gradient(to top right, var(--cor-clara), var(--azul));
 }
 main h1 {
     text-transform: uppercase;
@@ -85,9 +84,8 @@ main h1 {
     text-align: center;
 }
 .home-section p {
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     font-size: 1.4rem;
-    /* width: 270px; */
     margin-top: 2rem;
     text-align: center;
 }
@@ -95,15 +93,13 @@ p.line {
     width: calc(var(--variavel) + 10px);
     white-space: nowrap;
     overflow: hidden;
-    /* font-family: monospace; */
-    /* border-right: 2px solid rgba(255, 255, 255, 0.75); */
     font-family: 'Open Sans', sans-serif;
 }
 .typing-animation {
     animation: typing 4s steps(40) , blink 500ms steps(40) infinite;
 }
 .svg-icons {
-    fill: red;
+    fill: #ff0000;
 }
 .svg-icons img {
     width: 5rem;
@@ -116,20 +112,15 @@ p.line {
     bottom: 8rem;
     width: 100%;
     max-width: 500px;
-    /* background-color: white; */
     text-align: center;
-
     display: none;
-
 }
 .arrow-down {
     width: 40px;
     transform: translateY(var(--transform-value));
-
     border-radius: 50%;
     padding: 5px 7px 3px 7px;
-    background-color: #F2DA6D;
-    
+    background-color: var(--amarelo-detalhes);
     transition: .3s ease-in-out;
     animation: piscar 1s infinite;
 }
@@ -140,14 +131,10 @@ p.line {
 }
 @keyframes piscar {
     from {
-        /* background-color: white; */
     transform: translateY(var(--transform-value));
-
     }
     to {
-        /* background-color: #ffff00; */
     transform: translateY(80px);
-
     }
 }
 img.svg {
@@ -173,7 +160,7 @@ span:hover {
     content: " ";
     width: 0;
     height: 2px;
-    background-color: #c5ced5;
+    background-color: var(--cinza);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -225,7 +212,7 @@ span:hover {
     color: red;
 }
 div.svg-icons img {
-    background-color: #EDEDED;
+    background-color: var(--cor-clara);
     border-radius: 50%;
     padding: 1px;
 }
@@ -244,7 +231,7 @@ ul li a:active {
 /* SEGUNDA SECTION */
 section.whoAmI {
     /* background-image: ; */
-    background-color: #EDEDED;
+    background-color: var(--cor-clara);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -293,7 +280,7 @@ div.foto {
 /* TERCEIRA SECTION */
 section.skills {
     /* background-image: ; */
-    background-image: linear-gradient(to bottom, #EDEDED, #9FB3BF);
+    background-image: linear-gradient(to bottom, var(--cor-clara), var(--azul));
     padding-bottom: 2rem;
 }
 /* here */
@@ -337,7 +324,6 @@ div.curso {
 }
 .nome {
     padding: 30px 5px 0px 30px;
-    /* font-size: 2.4rem; */
     font-size: 3rem;
     font-weight: normal;
     font-family: var(--fonteh1);
@@ -351,7 +337,6 @@ div.curso {
     font-family: var(--fonteh1);
     font-style: italic;
     text-align: right;
-
 }
 .estado {
     text-align: center;
@@ -359,22 +344,21 @@ div.curso {
     border-radius: 0px 0px 6px 6px;
     padding: 3px;
     margin: auto;
-    background-color: #EDEDED;
+    background-color: var(--cor-clara);
     color: #05b505;
-    /* transform: translateY(30px); */
     font-style: italic;
     position: absolute;
     bottom: 0;
 }
 .cursando {
-    color: red;
+    color: #ff0000;
 }
 .pt-0 h4 {
     padding-top: 0px;
 }
 
 section.projetos {
-    background-image: linear-gradient(to bottom, #9FB3BF, #8798a3);
+    background-image: linear-gradient(to bottom, var(--azul), var(--tom-escuro));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -399,10 +383,8 @@ section.projetos {
     gap: 2rem;
     align-items: center;
     margin-bottom: 4rem;
-    background-color: rgba(255, 255, 255, 0.75);
-    /* padding: 3rem; */
+    background-color: #ffffffbf;
     padding: 1rem;
-    /* schmutzig */
     width: 93%;
     max-width: 900px;
     border-radius: 2rem;
@@ -443,7 +425,7 @@ section.projetos {
 a.visitar-site {
     /* background: none; */
     background-color: #000;
-    border: 3px solid black;
+    border: 3px solid #000000;
     color: #ffffff;
     padding: .6rem;
     text-decoration: none;
@@ -491,7 +473,7 @@ a.visitar-site {
     background: none;
     transition: .6s;
     color: #000;
-    background-color: #F2DA6D;
+    background-color: var(--amarelo-detalhes);
 }
 .contato div {
     display: flex;
@@ -521,7 +503,6 @@ a.visitar-site {
 
 
 section.section.contato {
-    /* background-color: #9FB3BF; */
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -533,12 +514,12 @@ section.section.contato {
     width: 100%;
     max-width: 450px;
     padding: 2rem;
-    box-shadow: 0px 0px 4px #c5ced5;
+    box-shadow: 0px 0px 4px var(--cinza);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #c5ced5;
+    background-color: var(--cinza);
 }
 
 
@@ -548,7 +529,7 @@ section.section.contato {
  @keyframes typing {
     from {
         width: 0px;
-        background-color: #9FB3BF;
+        background-color: var(--azul);
     }
     to {
         width: calc(var(--variavel) + 10px);
@@ -556,7 +537,7 @@ section.section.contato {
 } 
 @keyframes blink {
     from {
-        border-right-color: rgba(255, 255, 255, 0.75);
+        border-right-color: #ffffffbf;
     }
     to {
         border-right-color: transparent;
@@ -693,10 +674,6 @@ section.section.contato {
 @media (min-width: 1200px) {
     :root {
         --variavel: 340px;
-    }
-    section.home-section {
-        /* background-image: url('imgs/ceu-renascentista-landscape.jpg'); */
-        /* background-position: center center; */
     }
     .home-section p {
         font-size: 1.9rem;
