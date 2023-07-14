@@ -1,18 +1,24 @@
 @charset "UTF-8";
 
 @media all and (max-width: 768px) {
-    h1 {
-        color: rgb(230, 0, 255);
-    }
     div.img-text {
         flex-direction: column !important;
         gap: 3rem;
     }
 }
-
+@media screen and (max-width: 638px) {
+    .menu {
+        display: block;
+    }
+    header .div-p-menu {
+        display: none;
+    }
+    header {
+        justify-content: space-between;
+    }
+}
  @media all and (max-width: 558px) {
     h1 {
-        color: rgb(42, 43, 43);
         font-size: 25rem;
     }
     h2.menu-h2 {
@@ -22,7 +28,6 @@
  
 @media all and (max-width: 445px) {
     h1 {
-        color: rgb(42, 43, 43);
         font-size: 20rem;
     }
     h2.menu-h2 {
@@ -31,6 +36,9 @@
     div.img-text img {
         width: 93%;
         height: 30rem;
+    }
+    header .header-el img {
+        width: 2rem;
     }
 }
 @media all and (max-width: 389px) {
