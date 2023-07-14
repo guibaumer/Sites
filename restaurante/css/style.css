@@ -97,7 +97,8 @@ header a:hover {
 }
 .home-section {
     min-height: 120vh;
-    background-image: url('/imgs/home-restaurante.jpg');
+    /* background-image: url('/imgs/home-restaurante.jpg'); */
+    background-image: url('/imgs/home-restaurante-4.jpg');
     background-position: center center;
     background-size: cover;
     box-shadow: 0px 3px 6px #4848488e;
@@ -242,15 +243,14 @@ div.container {
 /* ///////////////////////////////////// */
 
 section.contact-section {
-    /* background-color: #000; */
     border-bottom: 1rem solid #4D0312;
 }
 section.contact-section h2 {
     margin: 0;
 }
 .img-bg {
-    background-image: url('/imgs/inner-fancy-restaurant.jpg');
-    background-image: url('/imgs/prato.jpg');
+    /* background-image: url('/imgs/prato.jpg'); */
+    background-image: url('/imgs/prato-2.jpg');
     background-size: cover;
     width: 100%;
     height: 100vh;
