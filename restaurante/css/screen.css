@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@media all and (max-width: 768px) {
+    h1 {
+        color: rgb(230, 0, 255);
+    }
+    div.img-text {
+        flex-direction: column !important;
+        gap: 3rem;
+    }
+}
+
+ @media all and (max-width: 558px) {
+    h1 {
+        color: rgb(42, 43, 43);
+        font-size: 25rem;
+    }
+    h2.menu-h2 {
+        font-size: 8rem;
+    }
+}
+ 
+@media all and (max-width: 445px) {
+    h1 {
+        color: rgb(42, 43, 43);
+        font-size: 20rem;
+    }
+    h2.menu-h2 {
+        font-size: 6rem;
+    }
+    div.img-text img {
+        width: 93%;
+        height: 30rem;
+    }
+}
+@media all and (max-width: 389px) {
+    h1 {
+        font-size: 18rem;
+    }
+}
+@media all and (max-width: 315px) {
+    div.img-text img {
+        width: 95%;
+        height: 27rem;
+    }
+    div.img-text p, div.img-text h2 {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+    div.container {
+        width: 95%;
+        height: 30rem;
+    }
+}
+
