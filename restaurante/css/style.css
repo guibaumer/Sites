@@ -97,13 +97,13 @@ header a:hover {
 }
 .home-section {
     min-height: 120vh;
-    /* background-image: url('/imgs/home-restaurante-otimizado.jpg'); */
+    background-image: url('/imgs/home-restaurante-otimizado.jpg');
     /* background-image: url('imgs/home-restaurante-otimizado.jpg'); */
-    background-image: url('home-restaurante-otimizado.jpg');
+    /* background-image: url('home-restaurante-otimizado.jpg'); */
     background-position: center center;
     background-size: cover;
     /* box-shadow: 0px 3px 6px #4848488e; */
-    box-shadow: 0px 3px 16px #a914148e;
+    box-shadow: 0px 3px 16px #50a9148e;
     background-attachment: fixed;
 }
 h1 {
