@@ -97,7 +97,8 @@ header a:hover {
 }
 .home-section {
     min-height: 120vh;
-    background-image: url('/imgs/home-restaurante-otimizado.jpg');
+    /* background-image: url('/imgs/home-restaurante-otimizado.jpg'); */
+    background-image: url('imgs/home-restaurante-otimizado.jpg');
     background-position: center center;
     background-size: cover;
     box-shadow: 0px 3px 6px #4848488e;
@@ -248,8 +249,8 @@ section.contact-section h2 {
     margin: 0;
 }
 .img-bg {
-    /* background-image: url('/imgs/prato-2.jpg'); */
-    background-image: url('/imgs/prato-fundo.jpg');
+    /* background-image: url('/imgs/prato-fundo.jpg'); */
+    background-image: url('imgs/prato-fundo.jpg');
     background-size: cover;
     width: 100%;
     height: 100vh;
