@@ -74,7 +74,7 @@ header div.header-el {
 header a {
     position: relative;
 }
-header a::after {
+header p a::after {
     content: ' ';
     width: 0px;
     height: 2px;
@@ -83,11 +83,11 @@ header a::after {
     bottom: -3px;
     left: 0;
 }
-header a:hover::after {
+header p a:hover::after {
     width: 100%;
     transition: .3s;
 }
-header a:hover {
+header p a:hover {
     color: #3d3d3d;
 }
 .div-p-menu {
@@ -99,6 +99,7 @@ header a:hover {
     width: 2rem;
     margin-left: 1.5rem;
     display: none;
+    transition: .4s;
 }
 .hidden {
     position: fixed;
@@ -126,7 +127,7 @@ header a:hover {
 }
 .hidden .div-p-menu p {
     margin-bottom: .5rem;
-    border-top: 1px solid #807f7f5e;
+    border-top: 1px solid #bdbcbc3d;
     width: 100%;
     padding: .5rem;
 }

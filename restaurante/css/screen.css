@@ -40,14 +40,15 @@
     header .header-el img {
         width: 2rem;
     }
+    .home-section {
+        min-height: 100vh;
+    }
 }
 @media all and (max-width: 389px) {
     h1 {
         font-size: 18rem;
     }
-    .home-section {
-        min-height: 100vh;
-    }
+    
 }
 @media all and (max-width: 315px) {
     div.img-text img {

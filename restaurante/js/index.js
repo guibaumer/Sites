@@ -22,16 +22,22 @@ menu.addEventListener('click', () => {
 });
 
 function apareceMenu() {
-    // if(hidden.style.height === '6rem') {
-    //     console.log('sim');
-    // } else {
-    //     console.log('não');
-    // }
     if(hidden.classList.contains('escondido')) {
         hidden.classList.remove('escondido');
         hidden.classList.add('estendido');
+        menu.style.rotate = '90deg';
     } else {
         hidden.classList.add('escondido');
         hidden.classList.remove('estendido');
+        menu.style.rotate = '0deg';
     }
 }
+
+const as = document.querySelectorAll('.header-el-hidden');
+for (const a of as) {
+    a.addEventListener('click', () => {
+        hidden.classList.remove('estendido');
+        hidden.classList.add('escondido');
+    });
+}
+
