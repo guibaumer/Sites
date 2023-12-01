@@ -23,7 +23,7 @@ html {
 }
 body {
     font-size: 1.8rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 a {
     text-decoration: none;
@@ -77,7 +77,6 @@ main h1 {
     font-family: 'Anton', sans-serif;
     font-weight: bolder;
     font-size: 6rem;
-    /* text-shadow: 0px 0px 7px rgb(0, 0, 0); */
     text-shadow: 0px 0px 10px rgb(0, 0, 0);
     color: #FFF;
     line-height: 6rem;
@@ -129,14 +128,6 @@ p.line {
     background-color: #ffffff;
     animation-play-state: paused;
 }
-@keyframes piscar {
-    from {
-    transform: translateY(var(--transform-value));
-    }
-    to {
-    transform: translateY(80px);
-    }
-}
 img.svg {
     width: 5rem;
     animation: rotation 1.2s;
@@ -155,6 +146,7 @@ span:hover {
 .nav-menu ul li a {
     position: relative;
     padding-bottom: .2rem;
+    font-family: 'Roboto', sans-serif;
 }
 .nav-menu ul li a::after {
     content: " ";
@@ -273,8 +265,40 @@ div.foto {
     box-shadow: 0px 0px 4px black;
 }
 
+/* SECTION EXPERIÊNCIA */
 
-
+.experience-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--cor-clara);
+}
+.experience {
+    max-width: 700px;
+    background-color: var(--amarelo-detalhes);
+    padding: 15px 20px 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.587)757;
+    text-align: center;
+}
+.workana-logo {
+    width: 160px;
+    background: none;
+    border: 2px solid #000000e7;
+    padding: 2px;
+    border-radius: 5px;
+}
+.workana-logo:hover {
+    width: 165px;
+    transition: .2s;
+}
+.p-workana {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
 
 
 /* TERCEIRA SECTION */
@@ -283,13 +307,9 @@ section.skills {
     background-image: linear-gradient(to bottom, var(--cor-clara), var(--azul));
     padding-bottom: 2rem;
 }
-/* here */
-/* .skills h2 {
-    font-family: var(--fonteh1);
-    font-size: 5rem;
-    font-weight: normal;
-    padding-bottom: 4rem;
-} */
+.skills h2 {
+    padding-top: 20px;
+}
 .grid {
     /* background-color: #f0e5b7; */
     width: 90%;
@@ -368,12 +388,9 @@ section.projetos {
     padding-bottom: 2rem;
     padding-top: 1rem;
 }
-.projetos h4 {
-    
-}
 
 .projetos p {
-    text-align: justify;
+    text-align: left;
 }
 .projetos div.container {
     width: 100%;
@@ -449,6 +466,9 @@ a.visitar-site {
 }
 .project-5 {
     background-image: url(imgs/miniatura/gerador-de-senhas.png);
+}
+.project-6 {
+    background-image: url(imgs/miniatura/lista-tarefas.png);
 }
 .contato h2 {
     padding-top: 1rem;
@@ -552,6 +572,14 @@ section.section.contato {
         transform: rotate(0deg) scale(1.0);
     }
 }
+@keyframes piscar {
+    from {
+    transform: translateY(var(--transform-value));
+    }
+    to {
+    transform: translateY(80px);
+    }
+}
 
 
 
@@ -626,6 +654,9 @@ section.section.contato {
 
 }
 @media (min-width: 992px) {
+    .experience {
+    font-size: 21px;
+    }
     .whoAmI {
         background-size: cover;
     }
