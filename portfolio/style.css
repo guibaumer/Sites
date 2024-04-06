@@ -652,7 +652,9 @@ section.section.contato {
         width: 50%;
     }
 
+
 }
+
 @media (min-width: 992px) {
     .experience {
     font-size: 21px;
